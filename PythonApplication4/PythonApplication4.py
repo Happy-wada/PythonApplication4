@@ -7,13 +7,13 @@ if(int_input >=645 and int_input <=649):
     str_nengo = '大化'
     int_year = int_input - 644
     if(int_year ==1):
-        print("西暦", int_input, "年は",str_nengo, int_year,"年です。\n",sep='' )
+        print("西暦", int_input, "年は飛鳥時代の",str_nengo, int_year,"年です。\n",sep='' )
     else:
-        print("西暦",int_input,"年は", str_nengo, int_year, "年です。", sep='')
+        print("西暦",int_input,"年は飛鳥時代の", str_nengo, int_year, "年です。", sep='')
 
 #飛鳥時代(白雉)
 #明治
-if(int_input >= 1868 and int_input <= 1911):
+elif(int_input >= 1868 and int_input <= 1911):
     str_nengo = "明治"
     int_year = int_input -1867
     if(int_year == 1):
@@ -57,7 +57,7 @@ elif(int_input >= 1989 and int_input <= 2018):
         print("西暦", int_input, "年は", str_nengo, int_year, "年です。\n", sep='')
 
 #令和
-elif(int_input >= 2019):
+elif(int_input >= 2019 and int_input <=2022):
     str_nengo = "令和"
     int_year = int_input - 2018
     if(int_year == 1):
@@ -67,5 +67,6 @@ elif(int_input >= 2019):
     else:
         print("西暦", int_input, "年は", str_nengo, int_year, "年です。\n", sep='')
 
-else:
-    print("西暦", int_input, "年は、かなり古い時代です。\n", sep='')
+elif(int_input < 645):
+    print("西暦", int_input, "年は、かなり古い時代のため和暦がありません。\n", sep='')
+
